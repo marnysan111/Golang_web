@@ -8,12 +8,14 @@ import (
 	"sync"
 )
 
+//templは一つのテンプレートを表す
 type templateHandler struct {
 	once     sync.Once //一回だけコンパイル？
 	filename string
 	templ    *template.Template
 }
 
+//ServeHTTPはHTTPリクエストを処理する
 func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
 		t.templ =
