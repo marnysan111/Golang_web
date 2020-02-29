@@ -1,0 +1,1 @@
+これは１章の1.4まで、１章の終わりまでのやったのち、main.goでr.tracer = trace.New(os.Stdout)を復元したものです
